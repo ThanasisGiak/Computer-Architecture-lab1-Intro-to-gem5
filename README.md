@@ -21,7 +21,7 @@
 
 **config.ini**:
 >[system.cpu_cluster.cpus]
- type=MinorCPU
+ >type=MinorCPU
 
 **config.json**:
 >"cpus": 
