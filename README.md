@@ -17,6 +17,7 @@
 ### Ερώτημα 2
 Σε αυτό το ερώτημα μας ζητήθηκε τα επαληθεύσουμε τα στοιχεία που παρουσιάσαμε στο ερώτημα 1 κάνοντας μελέτη των αρχείων config.ini και config.json και να παραθέσουμε τα αντίστοιχα πεδία.Στην διαδικασία της παράθεσης πρώτα παραθέτουμε το όνομα του SimObject όπως έχει οριστεί στο starter_se.py,στο config.ini είναι το πεδίο μέσα στα brackets [] (e.g [system.cpu_cluster.cpus])  και στο config.jon μέσα στα quotation marks(e.g "cpus") και μέτα την γραμμή που ορίζεται η πληροφορία που μας ενδιαφέρει:
 1.**CPU**:Στην εξομοίωση χρησιμοποίειται Minor model CPU.
+
 **config.ini**:
 >[system.cpu_cluster.cpus]
 type=MinorCPU
@@ -26,6 +27,7 @@ type=MinorCPU
 "type": "MinorCPU",
 
 2.**Συχνότητα λειτουργείας**:Έχει οριστεί στα 1Ghz.
+
 **config.ini**:
 >[system.clk_domain]
 clock=1000
@@ -37,6 +39,7 @@ clock=1000
            1000
            
 3.**Caches**:Βλέπουμε στα αρχεία ότι δημιουργείτε μία L1 data cache.
+
 **config.ini**:
 >[system.cpu_cluster.cpus.dcache]
 type=Cache
@@ -45,6 +48,7 @@ type=Cache
 >"dcache": {
 
 Μία L1 instruction cache.
+
 **config.ini**:
 >[system.cpu_cluster.cpus.icache]
 type=Cache
@@ -53,6 +57,7 @@ type=Cache
 >"icache": {
 
 Μία L2 cache.
+
 **config.ini**:
 >[system.cpu_cluster.l2]
 type=Cache
@@ -61,6 +66,7 @@ type=Cache
 >"l2": {
 
 Mία instruction to bus(itb) walker cache.
+
 **config.ini**:
 >[system.cpu_cluster.cpus.itb_walker_cache]
 type=Cache
@@ -78,6 +84,7 @@ type=Cache
 
 Επίσης,για αυτές τις caches μπορούμε να εντοπίσουμε και πολλά άλλα χαρακτηριστικά του στα αρχεία config.ini και config.jon όπως για παράδειγμα το μέγεθος τους.
 L1 data cache-32KB:
+
 **config.ini**:
 >[system.cpu_cluster.cpus.dcache]
 size=32768
@@ -96,6 +103,7 @@ size=32768
                             "size": 32768
                             
 L1 instruction cache-49KB.
+
 **config.ini**:
 >[system.cpu_cluster.cpus.icache]
 size=49152
@@ -114,6 +122,7 @@ size=49152
                             "size": 49152
                             
 L2 cache-10248KB.
+
 **config.ini**:
 >[system.cpu_cluster.l2]
 size=1048576
@@ -132,6 +141,7 @@ size=1048576
                     "size": 1048576
                     
 Data to bus(dtb) walker cache-1KB.
+
 **config.ini**:
 >[system.cpu_cluster.cpus.dtb_walker_cache]
 size=1024
@@ -150,6 +160,7 @@ size=1024
                             "size": 1024
                             
 Instruction to bus(itb) walker cache-1KB.
+
 **config.ini**:
 >[system.cpu_cluster.cpus.itb_walker_cache]
 size=1024
@@ -168,6 +179,7 @@ size=1024
                             "size": 1024
                           
 Το μήκος της γραμμής των caches είναι 64 bytes.
+
 **config.ini**:
 >[system]
 cache_line_size=64
@@ -177,6 +189,7 @@ cache_line_size=64
 
 4.**Μνήμη**
 Η μνήμη είναι ορισμένη στα 2GB.
+
 **config.ini**:
 >[system]
 mem_ranges=0:2147483647
@@ -186,6 +199,7 @@ mem_ranges=0:2147483647
             "0:2147483647"
 
 Για την SDRAM τα χαρακτηριστικα της ορίζονται στα εξής πεδία.
+
 **config.ini**:
 >[system]
 memories=system.mem_ctrls0 system.mem_ctrls1
@@ -346,7 +360,7 @@ H DPU περιέχει γενικού σκοπού καταχωρητές και
 
 6.Level 2 σύστημα μνήμης(Level 2 memory system)
 Αποτελείται από το Snoop Control Unit (SCU),Coherence Bus Interface και την L2 cache.
-####Ερώτημα 3b
+#### Ερώτημα 3b
 Σε αυτό το ερώτημα τρέξαμε στο gem5 μία εξομοίωση με ορίσματα αυτά που δίνονται στο αρχείο se.py και εκτελέσαμε το πρόγραμμα prog_arm(τον πηγαίο κώδικα θα τον βρείτε στο repository μας στο github με το όνομα prog.c).Την παραπάνω εξομοίωση της τρέξαμε δύο φορές,την μία δίνοντας ως όρισμα από την γραμμή εντολών να χρησιμοποιηθεί MinorCPU model και την άλλη TimingSimpleCPU model.
 
 Για να εκτελεστεί η εξομοίωση με MinorCPU model δώσαμε την εντολή:
