@@ -21,28 +21,29 @@
 
 **config.ini**:
 >[system.cpu_cluster.cpus]
+ 
  >type=MinorCPU
 
 **config.json**:
 >"cpus": 
 
-"type": "MinorCPU",
+>"type": "MinorCPU",
 
 2.**Συχνότητα λειτουργείας**:Έχει οριστεί στα 1Ghz.
 
 **config.ini**:
 >[system.clk_domain]
 
-clock=1000
+>clock=1000
 
 **config.json**:
 >"clk_domain": {
 
-       "name": "clk_domain",
+       >"name": "clk_domain",
        
-       "clock": [
+       >"clock": [
        
-           1000
+           >1000
            
            
 3.**Caches**:Βλέπουμε στα αρχεία ότι δημιουργείτε μία L1 data cache.
