@@ -21,28 +21,36 @@
 
 **config.ini**:
 >[system.cpu_cluster.cpus]
+
 type=MinorCPU
 
 **config.json**:
 >"cpus": 
+
 "type": "MinorCPU",
 
 2.**Συχνότητα λειτουργείας**:Έχει οριστεί στα 1Ghz.
 
 **config.ini**:
 >[system.clk_domain]
+
 clock=1000
 
 **config.json**:
 >"clk_domain": {
+
        "name": "clk_domain",
+       
        "clock": [
+       
            1000
+           
            
 3.**Caches**:Βλέπουμε στα αρχεία ότι δημιουργείτε μία L1 data cache.
 
 **config.ini**:
 >[system.cpu_cluster.cpus.dcache]
+
 type=Cache
 
 **config.json**:
@@ -52,6 +60,7 @@ type=Cache
 
 **config.ini**:
 >[system.cpu_cluster.cpus.icache]
+
 type=Cache
 
 **config.json**:
@@ -61,6 +70,7 @@ type=Cache
 
 **config.ini**:
 >[system.cpu_cluster.l2]
+
 type=Cache
 
 **config.json**:
@@ -70,6 +80,7 @@ Mία instruction to bus(itb) walker cache.
 
 **config.ini**:
 >[system.cpu_cluster.cpus.itb_walker_cache]
+
 type=Cache
 
 **config.json**:
@@ -78,6 +89,7 @@ type=Cache
 Mία data to bus(dtb) walker cache.
 **config.ini**:
 >[system.cpu_cluster.cpus.dtb_walker_cache]
+
 type=Cache
 
 **config.json**:
@@ -88,101 +100,158 @@ L1 data cache-32KB:
 
 **config.ini**:
 >[system.cpu_cluster.cpus.dcache]
+
 size=32768
 
 **config.json**:
 >"system": "system",
+
                             "sequential_access": false,
+                            
                             "assoc": 2,
+                            
                             "power_model": [],
+                            
                             "cxx_class": "BaseSetAssoc",
+                            
                             "p_state_clk_gate_max": 1000000000000,
+                            
                             "path": "system.cpu_cluster.cpus.dcache.tags",
+                            
                             "entry_size": 64,
+                            
                             "block_size": 64,
+                            
                             "type": "BaseSetAssoc",
+                            
                             "size": 32768
                             
 L1 instruction cache-49KB.
 
 **config.ini**:
 >[system.cpu_cluster.cpus.icache]
+
 size=49152
 
 **config.json**:
 >"system": "system",
+
                             "sequential_access": false,
+                            
                             "assoc": 3,
+                            
                             "power_model": [],
+                            
                             "cxx_class": "BaseSetAssoc",
+                            
                             "p_state_clk_gate_max": 1000000000000,
+                            
                             "path": "system.cpu_cluster.cpus.icache.tags",
+                            
                             "entry_size": 64,
+                            
                             "block_size": 64,
+                            
                             "type": "BaseSetAssoc",
+                            
                             "size": 49152
+                            
                             
 L2 cache-10248KB.
 
 **config.ini**:
 >[system.cpu_cluster.l2]
+
 size=1048576
 
 **config.json**:
 >"system": "system",
+
                     "sequential_access": false,
+                    
                     "assoc": 16,
+                    
                     "power_model": [],
+                    
                     "cxx_class": "BaseSetAssoc",
+                    
                     "p_state_clk_gate_max": 1000000000000,
+                    
                     "path": "system.cpu_cluster.l2.tags",
+                    
                     "entry_size": 64,
+                    
                     "block_size": 64,
+                    
                     "type": "BaseSetAssoc",
+                    
                     "size": 1048576
                     
 Data to bus(dtb) walker cache-1KB.
 
 **config.ini**:
 >[system.cpu_cluster.cpus.dtb_walker_cache]
+
 size=1024
 
 **config.json**:
 >"system": "system",
+
                             "sequential_access": false,
+                            
                             "assoc": 8,
+                            
                             "power_model": [],
+                            
                             "cxx_class": "BaseSetAssoc",
+                            
                             "p_state_clk_gate_max": 1000000000000,
+                            
                             "path": "system.cpu_cluster.cpus.dtb_walker_cache.tags",
+                            
                             "entry_size": 64,
+                            
                             "block_size": 64,
+                            
                             "type": "BaseSetAssoc",
+                            
                             "size": 1024
                             
 Instruction to bus(itb) walker cache-1KB.
 
 **config.ini**:
 >[system.cpu_cluster.cpus.itb_walker_cache]
+
 size=1024
 
 **config.json**:
 >"system": "system",
+
                             "sequential_access": false,
+                            
                             "assoc": 8,
+                            
                             "power_model": [],
+                            
                             "cxx_class": "BaseSetAssoc",
+                            
                             "p_state_clk_gate_max": 1000000000000,
+                            
                             "path": "system.cpu_cluster.cpus.itb_walker_cache.tags",
+                            
                             "entry_size": 64,
+                            
                             "block_size": 64,
+                            
                             "type": "BaseSetAssoc",
+                            
                             "size": 1024
                           
 Το μήκος της γραμμής των caches είναι 64 bytes.
 
 **config.ini**:
 >[system]
+
 cache_line_size=64
 
 **config.json**:
@@ -193,39 +262,57 @@ cache_line_size=64
 
 **config.ini**:
 >[system]
+
 mem_ranges=0:2147483647
 
 **config.json**:
 >"mem_ranges": [
+
             "0:2147483647"
 
 Για την SDRAM τα χαρακτηριστικα της ορίζονται στα εξής πεδία.
 
 **config.ini**:
 >[system]
+
 memories=system.mem_ctrls0 system.mem_ctrls1
 
 >[system.mem_ctrls0]
+
 
 >[system.mem_ctrls1]
 
 **config.json**:
 >1."memories": [
+
             "system.mem_ctrls0",
+            
             "system.mem_ctrls1"
             
 >2."p_state_clk_gate_min": 1000,
+
                 "ranks_per_channel": 2,
+                
                 "qos_q_policy": "fifo",
+                
                 "tRAS": 35000,
+                
                 "static_frontend_latency": 10000,
+                
                 "devices_per_rank": 8,
+                
                 "range": "0:2147483647:0:1048704",
+                
                 "mem_sched_policy": "frfcfs",
+                
                 "IDD2P12": 0.0,
+                
                 "device_rowbuffer_size": 1024,
+                
                 "activation_limit": 4,
+                
                 "tWTR": 7500,
+                
                 "enable_dram_powerdown": false,
                 "qos_syncro_scheduler": false,
                 "path": "system.mem_ctrls0",
