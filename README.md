@@ -160,7 +160,7 @@ L1 instruction cache-49KB.
    >"size": 49152
                             
                             
-L2 cache-10248KB.
+L2 cache-1048KB.
 
 **config.ini**:
 >[system.cpu_cluster.l2]
