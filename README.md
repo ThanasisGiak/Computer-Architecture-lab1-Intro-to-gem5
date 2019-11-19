@@ -540,7 +540,9 @@ Instruction to bus(itb) walker cache-1KB.
 4.Execute
 
 Επίσης,χρησιμοποιεί walk caches,L1 instruction cache,L1 data cache και L2 cache.
+
 4.**High-PerformanceIn-orderCPU(HPI)**
+
 Η υλοποίηση του συγκεκριμένου μοντέλου έχει βασιστεί σε μεγάλο βαθμό στο MinorCPU model.Παρακάτω θα παρουσιάσουμε τα στοιχεία αυτού του μοντέλου.
 
 1.Pipeline του επεξεργαστή
