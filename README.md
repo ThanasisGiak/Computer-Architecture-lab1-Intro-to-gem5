@@ -39,11 +39,11 @@
 **config.json**:
 >"clk_domain": {
 
-       >"name": "clk_domain",
+   >"name": "clk_domain",
        
-       >"clock": [
+   >"clock": [
        
-           >1000
+   >1000
            
            
 3.**Caches**:Βλέπουμε στα αρχεία ότι δημιουργείτε μία L1 data cache.
@@ -51,7 +51,7 @@
 **config.ini**:
 >[system.cpu_cluster.cpus.dcache]
 
-type=Cache
+>type=Cache
 
 **config.json**:
 >"dcache": {
@@ -61,7 +61,7 @@ type=Cache
 **config.ini**:
 >[system.cpu_cluster.cpus.icache]
 
-type=Cache
+>type=Cache
 
 **config.json**:
 >"icache": {
@@ -71,7 +71,7 @@ type=Cache
 **config.ini**:
 >[system.cpu_cluster.l2]
 
-type=Cache
+>type=Cache
 
 **config.json**:
 >"l2": {
@@ -81,7 +81,7 @@ Mία instruction to bus(itb) walker cache.
 **config.ini**:
 >[system.cpu_cluster.cpus.itb_walker_cache]
 
-type=Cache
+>type=Cache
 
 **config.json**:
 >"itb_walker_cache": {
@@ -90,7 +90,7 @@ Mία data to bus(dtb) walker cache.
 **config.ini**:
 >[system.cpu_cluster.cpus.dtb_walker_cache]
 
-type=Cache
+>type=Cache
 
 **config.json**:
 >"dtb_walker_cache": {
@@ -101,60 +101,60 @@ L1 data cache-32KB:
 **config.ini**:
 >[system.cpu_cluster.cpus.dcache]
 
-size=32768
+>size=32768
 
 **config.json**:
 >"system": "system",
 
-                            "sequential_access": false,
+   >"sequential_access": false,
                             
-                            "assoc": 2,
+   >"assoc": 2,
                             
-                            "power_model": [],
+   >"power_model": [],
                             
-                            "cxx_class": "BaseSetAssoc",
+   >"cxx_class": "BaseSetAssoc",
                             
-                            "p_state_clk_gate_max": 1000000000000,
+   >"p_state_clk_gate_max": 1000000000000,
                             
-                            "path": "system.cpu_cluster.cpus.dcache.tags",
+   >"path": "system.cpu_cluster.cpus.dcache.tags",
                             
-                            "entry_size": 64,
+   >"entry_size": 64,
                             
-                            "block_size": 64,
+   >"block_size": 64,
                             
-                            "type": "BaseSetAssoc",
+   >"type": "BaseSetAssoc",
                             
-                            "size": 32768
+   >"size": 32768
                             
 L1 instruction cache-49KB.
 
 **config.ini**:
 >[system.cpu_cluster.cpus.icache]
 
-size=49152
+>size=49152
 
 **config.json**:
 >"system": "system",
 
-                            "sequential_access": false,
+   >"sequential_access": false,
                             
-                            "assoc": 3,
+   >"assoc": 3,
                             
-                            "power_model": [],
+   >"power_model": [],
                             
-                            "cxx_class": "BaseSetAssoc",
+   >"cxx_class": "BaseSetAssoc",
                             
-                            "p_state_clk_gate_max": 1000000000000,
+   >"p_state_clk_gate_max": 1000000000000,
                             
-                            "path": "system.cpu_cluster.cpus.icache.tags",
+   >"path": "system.cpu_cluster.cpus.icache.tags",
                             
-                            "entry_size": 64,
+   >"entry_size": 64,
                             
-                            "block_size": 64,
+   >"block_size": 64,
                             
-                            "type": "BaseSetAssoc",
+   >"type": "BaseSetAssoc",
                             
-                            "size": 49152
+   >"size": 49152
                             
                             
 L2 cache-10248KB.
@@ -162,97 +162,97 @@ L2 cache-10248KB.
 **config.ini**:
 >[system.cpu_cluster.l2]
 
-size=1048576
+>size=1048576
 
 **config.json**:
 >"system": "system",
 
-                    "sequential_access": false,
+   >"sequential_access": false,
                     
-                    "assoc": 16,
+   >"assoc": 16,
                     
-                    "power_model": [],
+   >"power_model": [],
                     
-                    "cxx_class": "BaseSetAssoc",
+   >"cxx_class": "BaseSetAssoc",
                     
-                    "p_state_clk_gate_max": 1000000000000,
+   >"p_state_clk_gate_max": 1000000000000,
                     
-                    "path": "system.cpu_cluster.l2.tags",
+   >"path": "system.cpu_cluster.l2.tags",
                     
-                    "entry_size": 64,
+   >"entry_size": 64,
                     
-                    "block_size": 64,
+   >"block_size": 64,
                     
-                    "type": "BaseSetAssoc",
+   >"type": "BaseSetAssoc",
                     
-                    "size": 1048576
+   >"size": 1048576
                     
 Data to bus(dtb) walker cache-1KB.
 
 **config.ini**:
 >[system.cpu_cluster.cpus.dtb_walker_cache]
 
-size=1024
+>size=1024
 
 **config.json**:
 >"system": "system",
 
-                            "sequential_access": false,
+   >"sequential_access": false,
                             
-                            "assoc": 8,
+   >"assoc": 8,
                             
-                            "power_model": [],
+   >"power_model": [],
                             
-                            "cxx_class": "BaseSetAssoc",
+   >"cxx_class": "BaseSetAssoc",
                             
-                            "p_state_clk_gate_max": 1000000000000,
+   >"p_state_clk_gate_max": 1000000000000,
                             
-                            "path": "system.cpu_cluster.cpus.dtb_walker_cache.tags",
+   >"path": "system.cpu_cluster.cpus.dtb_walker_cache.tags",
                             
-                            "entry_size": 64,
+   >"entry_size": 64,
                             
-                            "block_size": 64,
+   >"block_size": 64,
                             
-                            "type": "BaseSetAssoc",
+   >"type": "BaseSetAssoc",
                             
-                            "size": 1024
+   >"size": 1024
                             
 Instruction to bus(itb) walker cache-1KB.
 
 **config.ini**:
 >[system.cpu_cluster.cpus.itb_walker_cache]
 
-size=1024
+>size=1024
 
 **config.json**:
 >"system": "system",
 
-                            "sequential_access": false,
+   >"sequential_access": false,
                             
-                            "assoc": 8,
+   >"assoc": 8,
                             
-                            "power_model": [],
+   >"power_model": [],
                             
-                            "cxx_class": "BaseSetAssoc",
+   >"cxx_class": "BaseSetAssoc",
                             
-                            "p_state_clk_gate_max": 1000000000000,
+   >"p_state_clk_gate_max": 1000000000000,
                             
-                            "path": "system.cpu_cluster.cpus.itb_walker_cache.tags",
+   >"path": "system.cpu_cluster.cpus.itb_walker_cache.tags",
                             
-                            "entry_size": 64,
+   >"entry_size": 64,
                             
-                            "block_size": 64,
+   >"block_size": 64,
                             
-                            "type": "BaseSetAssoc",
+   >"type": "BaseSetAssoc",
                             
-                            "size": 1024
+   >"size": 1024
                           
 Το μήκος της γραμμής των caches είναι 64 bytes.
 
 **config.ini**:
 >[system]
 
-cache_line_size=64
+>cache_line_size=64
 
 **config.json**:
 >"cache_line_size": 64,
@@ -263,19 +263,19 @@ cache_line_size=64
 **config.ini**:
 >[system]
 
-mem_ranges=0:2147483647
+>mem_ranges=0:2147483647
 
 **config.json**:
 >"mem_ranges": [
 
-            "0:2147483647"
+   >"0:2147483647"
 
 Για την SDRAM τα χαρακτηριστικα της ορίζονται στα εξής πεδία.
 
 **config.ini**:
 >[system]
 
-memories=system.mem_ctrls0 system.mem_ctrls1
+>memories=system.mem_ctrls0 system.mem_ctrls1
 
 >[system.mem_ctrls0]
 
@@ -285,133 +285,231 @@ memories=system.mem_ctrls0 system.mem_ctrls1
 **config.json**:
 >1."memories": [
 
-            "system.mem_ctrls0",
+   >"system.mem_ctrls0",
             
-            "system.mem_ctrls1"
+   >"system.mem_ctrls1"
             
 >2."p_state_clk_gate_min": 1000,
 
-                "ranks_per_channel": 2,
+   >"ranks_per_channel": 2,
                 
-                "qos_q_policy": "fifo",
+   >"qos_q_policy": "fifo",
                 
-                "tRAS": 35000,
+   >"tRAS": 35000,
                 
-                "static_frontend_latency": 10000,
+   >"static_frontend_latency": 10000,
                 
-                "devices_per_rank": 8,
+   >"devices_per_rank": 8,
                 
-                "range": "0:2147483647:0:1048704",
+   >"range": "0:2147483647:0:1048704",
                 
-                "mem_sched_policy": "frfcfs",
+   >"mem_sched_policy": "frfcfs",
                 
-                "IDD2P12": 0.0,
+   >"IDD2P12": 0.0,
                 
-                "device_rowbuffer_size": 1024,
+   >"device_rowbuffer_size": 1024,
                 
-                "activation_limit": 4,
+   >"activation_limit": 4,
                 
-                "tWTR": 7500,
+   >"tWTR": 7500,
                 
-                "enable_dram_powerdown": false,
-                "qos_syncro_scheduler": false,
-                "path": "system.mem_ctrls0",
-                "bank_groups_per_rank": 0,
-                "IDD2N": 0.032,
-                "qos_turnaround_policy": null,
-                "in_addr_map": true,
-                "tRTW": 2500,
-                "burst_length": 8,
-                "tRTP": 7500,
-                "eventq_index": 0,
-                "IDD2P02": 0.0,
-                "default_p_state": "UNDEFINED",
-                "addr_mapping": "RoRaBaCoCh",
-                "type": "DRAMCtrl",
-                "IDD3P02": 0.0,
-                "conf_table_reported": true,
-                "tXS": 270000,
-                "tXP": 6000,
-                "IDD3N": 0.038,
-                "tCCD_L_WR": 0,
-                "kvm_map": true,
-                "tXAW": 30000,
-                "IDD3P12": 0.0,
-                "IDD3N2": 0.0,
-                "device_bus_width": 8,
-                "cxx_class": "DRAMCtrl",
-                "null": false,
-                "tRRD_L": 0,
-                "tRRD": 6000,
-                "clk_domain": "system.clk_domain",
-                "IDD6": 0.02,
-                "IDD5": 0.23500000000000001,
-                "tRCD": 13750,
-                "IDD0": 0.055,
-                "min_writes_per_switch": 16,
-                "IDD02": 0.0,
-                "page_policy": "open_adaptive",
-                "read_buffer_size": 32,
-                "IDD4R2": 0.0,
-                "tXSDLL": 0,
-                "p_state_clk_gate_bins": 20,
-                "tRP": 13750
+   >"enable_dram_powerdown": false,
                 
->3."p_state_clk_gate_min": 1000,
-                "ranks_per_channel": 2,
-                "qos_q_policy": "fifo",
-                "tRAS": 35000,
-                "static_frontend_latency": 10000,
-                "devices_per_rank": 8,
-                "range": "0:2147483647:1:1048704",
-                "mem_sched_policy": "frfcfs",
-                "IDD2P12": 0.0,
-                "device_rowbuffer_size": 1024,
-                "activation_limit": 4,
-                "tWTR": 7500,
-                "enable_dram_powerdown": false,
-                "qos_syncro_scheduler": false,
-                "path": "system.mem_ctrls1",
-                "bank_groups_per_rank": 0,
-                "IDD2N": 0.032,
-                "qos_turnaround_policy": null,
-                "in_addr_map": true,
-                "tRTW": 2500,
-                "burst_length": 8,
-                "tRTP": 7500,
-                "eventq_index": 0,
-                "IDD2P02": 0.0,
-                "default_p_state": "UNDEFINED",
-                "addr_mapping": "RoRaBaCoCh",
-                "type": "DRAMCtrl",
-                "IDD3P02": 0.0,
-                "conf_table_reported": true,
-                "tXS": 270000,
-                "tXP": 6000,
-                "IDD3N": 0.038,
-                "tCCD_L_WR": 0,
-                "kvm_map": true,
-                "tXAW": 30000,
-                "IDD3P12": 0.0,
-                "IDD3N2": 0.0,
-                "device_bus_width": 8,
-                "cxx_class": "DRAMCtrl",
-                "null": false,
-                "tRRD_L": 0,
-                "tRRD": 6000,
-                "clk_domain": "system.clk_domain",
-                "IDD6": 0.02,
-                "IDD5": 0.23500000000000001,
-                "tRCD": 13750,
-                "IDD0": 0.055,
-                "min_writes_per_switch": 16,
-                "IDD02": 0.0,
-                "page_policy": "open_adaptive",
-                "read_buffer_size": 32,
-                "IDD4R2": 0.0,
-                "tXSDLL": 0,
-                "p_state_clk_gate_bins": 20,
-                "tRP": 13750
+   >"qos_syncro_scheduler": false,
+   
+   >"path": "system.mem_ctrls0",
+   
+   >"bank_groups_per_rank": 0,
+                
+   >"IDD2N": 0.032,
+                
+   >"qos_turnaround_policy": null,
+                
+   >"in_addr_map": true,
+                
+   >"tRTW": 2500,
+                
+   >"burst_length": 8,
+                
+   >"tRTP": 7500,
+   
+   >"eventq_index": 0,
+   
+   >"IDD2P02": 0.0,
+                
+   >"default_p_state": "UNDEFINED",
+                
+   >"addr_mapping": "RoRaBaCoCh",
+                
+   >"type": "DRAMCtrl",
+   
+   >"IDD3P02": 0.0,
+   
+   >"conf_table_reported": true,
+   
+   >"tXS": 270000,
+   
+   >"tXP": 6000,
+   
+   >"IDD3N": 0.038,
+   
+   >"tCCD_L_WR": 0,
+   
+   >"kvm_map": true,
+   
+   >"tXAW": 30000,
+   
+   >"IDD3P12": 0.0,
+   
+   >"IDD3N2": 0.0,
+   
+   >"device_bus_width": 8,
+   
+   >"cxx_class": "DRAMCtrl",
+   
+   >"null": false,
+   
+   >"tRRD_L": 0,
+   
+   >"tRRD": 6000,
+   
+   >"clk_domain": "system.clk_domain",
+   
+   >"IDD6": 0.02,
+   
+   >"IDD5": 0.23500000000000001,
+   
+   >"tRCD": 13750,
+   
+   >"IDD0": 0.055,
+   
+   >"min_writes_per_switch": 16,
+   
+   >"IDD02": 0.0,
+   
+   >"page_policy": "open_adaptive",
+   
+   >"read_buffer_size": 32,
+   
+   >"IDD4R2": 0.0,
+   
+   >"tXSDLL": 0,
+   
+   >"p_state_clk_gate_bins": 20,
+   
+   >"tRP": 13750
+   
+                
+>3"p_state_clk_gate_min": 1000,
+
+   >"ranks_per_channel": 2,
+   
+   >"qos_q_policy": "fifo",
+   
+   >"tRAS": 35000,
+   
+   >"static_frontend_latency": 10000,
+   
+   >"devices_per_rank": 8,
+   
+   >"range": "0:2147483647:1:1048704",
+   
+   >"mem_sched_policy": "frfcfs",
+   
+   >"IDD2P12": 0.0,
+   
+   >"device_rowbuffer_size": 1024,
+   
+   >"activation_limit": 4,
+   
+   >"tWTR": 7500,
+   
+   >"enable_dram_powerdown": false,
+   
+   >"qos_syncro_scheduler": false,
+   
+   >"path": "system.mem_ctrls1",
+   
+   >"bank_groups_per_rank": 0,
+   
+   >"IDD2N": 0.032,
+   
+   >"qos_turnaround_policy": null,
+   
+   >"in_addr_map": true,
+   
+   >"tRTW": 2500,
+   
+   >"burst_length": 8,
+   
+   >"tRTP": 7500,
+   
+   >"eventq_index": 0,
+   
+   >"IDD2P02": 0.0,
+   
+   >"default_p_state": "UNDEFINED",
+   
+   >"addr_mapping": "RoRaBaCoCh",
+   
+   >"type": "DRAMCtrl",
+   
+   >"IDD3P02": 0.0,
+   
+   >"conf_table_reported": true,
+   
+   >"tXS": 270000,
+   
+   >"tXP": 6000,
+   
+   >"IDD3N": 0.038,
+   
+   >"tCCD_L_WR": 0,
+   
+   >"kvm_map": true,
+   
+   >"tXAW": 30000,
+   
+   >"IDD3P12": 0.0,
+   
+   >"IDD3N2": 0.0,
+   
+   >"device_bus_width": 8,
+   
+   >"cxx_class": "DRAMCtrl",
+   
+   >"null": false,
+   
+   >"tRRD_L": 0,
+   
+   >"tRRD": 6000,
+   
+   >"clk_domain": "system.clk_domain",
+   
+   >"IDD6": 0.02,
+   
+   >"IDD5": 0.23500000000000001,
+   
+   >"tRCD": 13750,
+   
+   >"IDD0": 0.055,
+   
+   >"min_writes_per_switch": 16,
+   
+   >"IDD02": 0.0,
+   
+   >"page_policy": "open_adaptive",
+   
+   >"read_buffer_size": 32,
+   
+   >"IDD4R2": 0.0,
+   
+   >"tXSDLL": 0,
+   
+   >"p_state_clk_gate_bins": 20,
+   
+   >"tRP": 13750
+   
 
 ### Ερώτημα 3
 #### Ερώτημα 3a
@@ -468,8 +566,11 @@ H DPU περιέχει γενικού σκοπού καταχωρητές και
 Και μελετώντας το αρχείο stats.txt(θα το βρείτε στο repository μας στο github με το όνομα stats_minor_cpu_model.txt) εντοπίσαμε τα εξής αποτελέσματα ως αναφορά τους χρόνους εκτέλεσης:
 
 >final_tick                                   39328000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
-sim_seconds                                  0.000039                       # Number of seconds simulated
-sim_ticks                                    39328000                       # Number of ticks simulated
+
+>sim_seconds                                  0.000039                       # Number of seconds simulated
+
+>sim_ticks                                    39328000                       # Number of ticks simulated
+
 
 Για να εκτελεστεί η εξομοίωση με TimingSimpleCPU model δώσαμε την εντολή:
 
@@ -478,8 +579,11 @@ sim_ticks                                    39328000                       # Nu
 Και μελετώντας το αρχείο stats.txt(θα το βρείτε στο repository μας στο github με το όνομα stats_timing_simple_cpu_model.txt) εντοπίσαμε τα εξής αποτελέσματα ως αναφορά τους χρόνους εκτέλεσης:
 
 >final_tick                                   49082000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
-sim_seconds                                  0.000049                       # Number of seconds simulated
-sim_ticks                                    49082000                       # Number of ticks simulated
+
+>sim_seconds                                  0.000049                       # Number of seconds simulated
+
+>sim_ticks                                    49082000                       # Number of ticks simulated
+
 
 Βλέπουμε ότι η εξομοίωση με MinorCPU model είναι ταχύτερη από αυτήν με TimingSimpleCPU model το οποίο είναι αναμενόμενο λόγω του ότι το MinorCPU model χρησιμοποιεί pipeline στην εκτέλεση των εντολών αλλά και caches.
 #### Ερώτημα 3c
@@ -492,8 +596,11 @@ sim_ticks                                    49082000                       # Nu
 
 όπως ήταν αναμενόμενο μελετώντας το αρχείο stats.txt της εξομοίωσης βλέπουμε σημαντική βελτίωση στον χρόνο από 0.000039s σε 0.000034s όπως βλέπουμε και παρακάτω:
 >final_tick                                   33544000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
-sim_seconds                                  0.000034                       # Number of seconds simulated
-sim_ticks                                    33544000                       # Number of ticks simulated
+
+>sim_seconds                                  0.000034                       # Number of seconds simulated
+
+>sim_ticks                                    33544000                       # Number of ticks simulated
+
 
 Αρχικά,ορίσαμε την τεχνολογία μνήμης του επεξεργαστή
 σε MinorCPU μοντέλο,σε DDR4_2400_16x4 με την εντολή:
@@ -501,24 +608,33 @@ sim_ticks                                    33544000                       # Nu
 
 και πάλι βλέπουμε βελτίωση στον χρόνο μικρότερης τάξης από πριν,από 0.000039s σε 0.000038s:
 >final_tick                                   37907000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
-sim_seconds                                  0.000038                       # Number of seconds simulated
-sim_ticks                                    37907000                       # Number of ticks simulated
+
+>sim_seconds                                  0.000038                       # Number of seconds simulated
+
+>sim_ticks                                    37907000                       # Number of ticks simulated
+
 
 Αντίστοιχα για TimingSimpleCPU μοντέλο ορίσαμε πρώτα την συχνότητα λειτουργίας του επεξεργαστή στα 4GHz με την εντολή:
 >./build/ARM/gem5.opt configs/example/se.py --cpu-type=TimingSimpleCPU --cpu-clock=4GHz --caches -c /home/uglynick/my_gem5/prog_arm
 
 και παρατηρήσαμε βελτίωση στον χρόνο,αντίστοιχη με το MinorCPU μοντέλο και ακόμα καλύτερη,από 0.000049s στα 0.000037s.
 >final_tick                                   37071500                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
-sim_seconds                                  0.000037                       # Number of seconds simulated
-sim_ticks                                    37071500                       # Number of ticks simulated
+
+>sim_seconds                                  0.000037                       # Number of seconds simulated
+
+>sim_ticks                                    37071500                       # Number of ticks simulated
+
 
 Τέλος,ορίσαμε την τεχνολογία μνήμης με την εντολή:
 >./build/ARM/gem5.opt configs/example/se.py --cpu-type=TimingSimpleCPU --mem-type=DDR4_2400_16x4 --caches -c /home/uglynick/my_gem5/prog_arm
 
 και παρατηρήσαμε σαφώς μικρότερη βελτίωση,από 0.000049s στα 0.000048s:
 >final_tick                                   48346000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
-sim_seconds                                  0.000048                       # Number of seconds simulated
-sim_ticks                                    48346000                       # Number of ticks simulated
+
+>sim_seconds                                  0.000048                       # Number of seconds simulated
+
+>sim_ticks                                    48346000                       # Number of ticks simulated
+
 
 ## Λίγα λόγια από εμάς
 Η συγκεκριμένη εργασία ήταν μία πολύ καλή αφορμή για έμας να μάθουμε και να εξοικειωθούμε με κάποια στοιχεία του gem5 και σαν διαδικασία ήταν απολαυστική.Φυσικά,οι απαντήσεις στα παραπάνω ερώτηματα προήλθαν από δικιά μας έρευνα και εξαγωγή συμπερασμάτων και όντας αρχαριοί πιστεύουμε ότι θα υπάρχουν και πολλές αστοχίες τις οποίες θα θέλαμε να μας τις επισημάνεται.Ένα πράγμα που θα ήταν καλό να είχε περιληφθεί στην εκφώνηση της εργασίας θα ήταν να υπήρχε κάποια σύσταση ως προς τους πόσους λογικούς επεξεργαστες(εντολή scons -jN) θα ήταν καλύτερο να επιτρέψουμε στο Vitrual Machine(VM) να χρησιμοποιεί.Επίσης,μία ασάφεια που εντοπίσαμε στην εκφώνηση της εργασίας ήταν στην δεύτερη σελίδα όπου μας δίνονται οι εντολές για εγκατάσταση του gem5 και συγκεκριμένα στην εντολή:
@@ -532,7 +648,10 @@ sim_ticks                                    48346000                       # Nu
 
 ## Βιβλιογραφία
 1.gem5 simulator wiki [http://gem5.org/Main_Page](http://gem5.org/Main_Page)
+
 2.gem5 tutorial [http://pages.cs.wisc.edu/~david/courses/cs752/Fall2015/gem5-tutorial/index.html](http://pages.cs.wisc.edu/~david/courses/cs752/Fall2015/gem5-tutorial/index.html)
+
 3.Ashkan Tousi and Chuan Zhu Arm Research Starter Kit: System Modeling
 using gem5
+
 4.Nitish Srivastava-A Tutorial on the Gem5 Memory Model [https://nitish2112.github.io/post/gem5-memory-model/](https://nitish2112.github.io/post/gem5-memory-model/)
